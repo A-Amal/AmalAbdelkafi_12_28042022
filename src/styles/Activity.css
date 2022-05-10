@@ -1,0 +1,16 @@
+.chart-title{
+    font-family: 'Roboto', 'sans-serif';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+    color: #20253A;
+}
+.chart-legend{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #74798C;
+}

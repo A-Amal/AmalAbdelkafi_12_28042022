@@ -1,0 +1,27 @@
+.homepage{
+    display: flex;
+    flex-direction: column;
+    margin-left: 150px;
+    padding: 50px;
+}
+.section-header{
+
+}
+.section-title{
+    font-family: 'Roboto', 'sans-serif';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 24px;
+    color: black;
+    text-align: left;
+}
+.section-secondary{
+    font-family: 'Roboto', 'sans-serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: black;
+    text-align: left;
+}
