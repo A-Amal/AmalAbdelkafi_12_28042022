@@ -55,7 +55,7 @@ function Activity(){
             </ul>
 */}
 
-            <BarChart width={835} height={3200}  data={data}>
+            <BarChart width={835} height={320}  data={data}>
                 <CartesianGrid strokeDasharray="2" vertical={false}/>
                 <Legend
                     verticalAlign="top"

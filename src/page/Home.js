@@ -2,6 +2,8 @@
 import data from '../dataMocked'
 import Activity from "../components/Activity";
 import '../styles/Home.css'
+import AverageSessions from "../components/AverageSessions";
+import Performance from "../components/Performance";
 
 function Home(){
     const userinfo = data.USER_MAIN_DATA.find(x => x.id = 12)
@@ -18,10 +20,10 @@ function Home(){
                                 <Activity />
                             </div>
                             <div className="chart-average-sessions">
-                                <p>session</p>
+                               <AverageSessions />
                             </div>
                             <div className="chart-performance">
-                                <p>performanceKind</p>
+                                <Performance />
                             </div>
                             <div className="chart-score">
                                 <p>score</p>

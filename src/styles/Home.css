@@ -25,3 +25,17 @@
     color: black;
     text-align: left;
 }
+.chart-average-sessions{
+    width: 258px;
+    height: 263px;
+    background: #FF0000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.0212249);
+    border-radius: 5px;
+}
+.chart-performance{
+    width: 258px;
+    height: 263px;
+    background: #282D30;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.0212249);
+    border-radius: 5px;
+}
