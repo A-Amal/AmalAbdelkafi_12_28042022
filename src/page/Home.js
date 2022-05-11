@@ -5,6 +5,7 @@ import '../styles/Home.css'
 import AverageSessions from "../components/AverageSessions";
 import Performance from "../components/Performance";
 import Score from "../components/Score";
+import Stat from "../components/Stat";
 
 function Home(){
     const userinfo = data.USER_MAIN_DATA.find(x => x.id = 12)
@@ -30,7 +31,7 @@ function Home(){
                                 <Score />
                             </div>
                             <div className="stats">
-                                <p>stat</p>
+                                <Stat/>
                             </div>
                         </div>
             </section>
