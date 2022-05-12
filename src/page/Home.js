@@ -18,17 +18,21 @@ function Home(){
                             <p className="section-secondary">Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
                         </header>
                         <div className="homepage-grid">
-                            <div className="chart-activity">
-                                <Activity />
-                            </div>
-                            <div className="chart-average-sessions">
-                               <AverageSessions />
-                            </div>
-                            <div className="chart-performance">
-                                <Performance />
-                            </div>
-                            <div className="chart-score">
-                                <Score />
+                            <div className="chart-activity-stats">
+                                <div className="chart-activity">
+                                    <Activity />
+                                </div>
+                                <div className="chart-sessions-performance-score">
+                                    <div className="chart-average-sessions">
+                                       <AverageSessions />
+                                    </div>
+                                    <div className="chart-performance">
+                                        <Performance />
+                                    </div>
+                                    <div className="chart-score">
+                                        <Score />
+                                    </div>
+                                </div>
                             </div>
                             <div className="stats">
                                 <Stat/>

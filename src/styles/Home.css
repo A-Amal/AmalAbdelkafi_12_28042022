@@ -3,6 +3,7 @@
     flex-direction: column;
     margin-left: 150px;
     padding: 50px;
+
 }
 .section-header{
 
@@ -25,6 +26,11 @@
     color: black;
     text-align: left;
 }
+.homepage-grid{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .chart-average-sessions{
     width: 258px;
     height: 263px;
@@ -32,10 +38,29 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.0212249);
     border-radius: 5px;
 }
+.chart-activity{
+    margin-bottom: 30px;
+}
 .chart-performance{
     width: 258px;
     height: 263px;
     background: #282D30;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.0212249);
     border-radius: 5px;
+}
+.chart-score{
+    width: 258px;
+    height: 263px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.0212249);
+    border-radius: 5px;
+}
+.chart-activity-stats{
+    display: flex;
+    flex-direction: column;
+
+}
+.chart-sessions-performance-score{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
