@@ -1,0 +1,50 @@
+.stat{
+    width: 260px;
+    height: 125px;
+    border-radius: 5px;
+    background: #FBFBFB;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.0212249);
+    display: flex;
+    flex-direction: row;
+    justify-content:stretch;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+.stat-content{}
+.stat-title{
+    font-family: 'Roboto', 'sans-serif';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #282D30;
+}
+.stat-secondary{
+    font-family: 'Roboto' , 'sans-serif';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #74798C;
+}
+.stat-icon.icon-red{
+    background: rgba(255, 0, 0, 0.1);
+}
+.stat-icon.icon-blue{
+    background: rgba(74, 184, 255, 0.1);
+}
+.stat-icon.icon-yellow {
+    background: rgba(249, 200, 3, 0.07);
+}
+.stat-icon.icon-pink{
+    background: rgba(253, 81, 129, 0.1);
+}
+

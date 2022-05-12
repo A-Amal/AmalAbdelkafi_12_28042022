@@ -2,6 +2,7 @@ import apple from "../assets/apple.svg"
 import energy from "../assets/energy.svg"
 import chicken from "../assets/chicken.svg"
 import cheeseburger from "../assets/cheeseburger.svg"
+import '../styles/Stat.css'
 
 
 function Stat(){
@@ -53,7 +54,7 @@ function Stat(){
         <>
             <div className="stat">
                 <div className={`stat-icon icon-red`}>
-                    <img src={energy} alt={'Calories'} />
+                    <img  src={energy} className="img" alt={'Calories'} />
                 </div>
                 <div className="stat-content">
                     <h2 className="stat-title">{data.calorieCount}{"kCal"}</h2>
