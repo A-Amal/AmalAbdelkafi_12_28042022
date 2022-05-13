@@ -47,16 +47,16 @@ function Activity(){
     ]
     return(
         <>
-            <h2 className="chart-title">Activité quotidienne</h2>
-            {/*
-            <ul className="chart-legend">
-                <li>Poids (kg)</li>
-                <li>Calories brûlées (kCal)</li>
-            </ul>
-*/}
-
-            <BarChart width={835} height={320}  data={data}>
+            <div className="header-activity">
+                <h2 className="chart-title">Activité quotidienne</h2>
+                <ul className="chart-legend">
+                    <li>Poids (kg)</li>
+                    <li>Calories brûlées (kCal)</li>
+                </ul>
+            </div>
+            <BarChart width={835} height={320}   data={data}>
                 <CartesianGrid strokeDasharray="2" vertical={false}/>
+                {/*
                 <Legend
                     verticalAlign="top"
                     align="right"
@@ -65,6 +65,7 @@ function Activity(){
                     height={100}
                     formatter={formatLegend}
                 />
+                */}
                 <XAxis
                     dataKey="day"
                     tickMargin={16}

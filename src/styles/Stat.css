@@ -17,6 +17,7 @@
     border-radius: 6px;
     margin-top: 20px;
     margin-right: 20px;
+    text-align: center;
 }
 .stat-content{}
 .stat-title{
@@ -47,4 +48,6 @@
 .stat-icon.icon-pink{
     background: rgba(253, 81, 129, 0.1);
 }
-
+ .img{
+    margin-top: 17px
+}

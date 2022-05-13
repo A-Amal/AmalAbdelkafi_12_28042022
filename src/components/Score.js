@@ -1,15 +1,14 @@
-import {PieChart, Cell, Legend, Pie, ResponsiveContainer} from "recharts";
+import {PieChart, Cell, Legend, Pie} from "recharts";
 import '../styles/Score.css'
 
-
 function Score(){
-    const data = 0.3
+    const data = 0.5
     return(
         <>
-            <h2 className="chart-title">Score</h2>
+            <h2 className="chart-title-score">Score</h2>
 
-                <PieChart width={250}
-                          height={260}
+                <PieChart width={260}
+                          height={160}
                 >
                     <Pie
                         cx={'50%'} cy={'50%'}

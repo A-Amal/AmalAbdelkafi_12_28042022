@@ -1,4 +1,4 @@
-.chart-title{
+.chart-title-session{
     font-family: 'Roboto', 'sans-serif';
     font-style: normal;
     font-weight: 500;
@@ -7,5 +7,6 @@
     color: white;
     mix-blend-mode: normal;
     opacity: 0.5;
-    padding: 30px 35px;
+    padding: 20px 20px;
+
 }

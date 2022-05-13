@@ -36,7 +36,7 @@ function AverageSessions(){
     const formatDay = (item) => daysWeek[item]
     return(
         <div>
-            <h2 className="chart-title">Durée moyenne des sessions</h2>
+            <h2 className="chart-title-session">Durée moyenne des sessions</h2>
             <LineChart data={data} width={260}
                        height={150}>
                 <XAxis

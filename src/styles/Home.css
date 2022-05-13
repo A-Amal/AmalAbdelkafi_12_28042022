@@ -29,7 +29,7 @@
 .homepage-grid{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: start;
 }
 .chart-average-sessions{
     width: 258px;
@@ -40,6 +40,10 @@
 }
 .chart-activity{
     margin-bottom: 30px;
+    background: #FBFBFB;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.0212249);
+    border-radius: 5px;
+    padding: 30px;
 }
 .chart-performance{
     width: 258px;

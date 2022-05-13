@@ -63,7 +63,7 @@ function Stat(){
             </div>
             <div className="stat">
                 <div className={`stat-icon icon-blue`}>
-                    <img src={chicken} alt={'Protéines'} />
+                    <img src={chicken} className="img" alt={'Protéines'} />
                 </div>
                 <div className="stat-content">
                     <h2 className="stat-title">{data.carbohydrateCount}{"g"}</h2>
@@ -72,7 +72,7 @@ function Stat(){
             </div>
             <div className="stat">
                 <div className={`stat-icon icon-yellow`}>
-                    <img src={apple} alt={'Glucides'} />
+                    <img src={apple} className="img" alt={'Glucides'} />
                 </div>
                 <div className="stat-content">
                     <h2 className="stat-title">{data.lipidCount}{"g"}</h2>
@@ -81,7 +81,7 @@ function Stat(){
             </div>
             <div className="stat">
                 <div className={`stat-icon icon-pink`}>
-                    <img src={cheeseburger} alt={'Lipides'} />
+                    <img src={cheeseburger} className="img" alt={'Lipides'} />
                 </div>
                 <div className="stat-content">
                     <h2 className="stat-title">{data.proteinCount}{"g"}</h2>

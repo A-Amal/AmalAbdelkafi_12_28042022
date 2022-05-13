@@ -1,8 +1,11 @@
-.chart-title{
-    font-family: 'Roboto', sans-serif;
+.chart-title-score{
+    font-family: 'Roboto', 'sans-serif';
     font-style: normal;
     font-weight: 500;
     font-size: 15px;
     line-height: 24px;
     color: #20253A;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    padding: 20px 20px;
 }
