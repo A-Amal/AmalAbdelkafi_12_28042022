@@ -1,46 +1,19 @@
 import {RadarChart, Legend, PolarAngleAxis, PolarGrid, Radar, PolarRadiusAxis} from "recharts";
 
-function Performance(){
-    const data = [
-        {
-            value: 80,
-            kind: 'Cardio'
-        },
-        {
-            value: 120,
-            kind:'Energie'
-        },
-        {
-            value: 140,
-            kind: 'Endurance'
-        },
-        {
-            value: 50,
-            kind: 'Force'
-        },
-        {
-            value: 200,
-            kind: 'Vitesse'
-        },
-        {
-            value: 90,
-            kind: 'Intensité'
-        }
-    ]
+function Performance({data, kind}){
     // Rotate radar to start with intensity
     const angleStart = 210
-
-    // Format kind
-    const titleKind = {
-        1: 'Cardio',
-        2: 'Energie',
-        3: 'Endurance',
-        4: 'Force',
-        5: 'Vitesse',
-        6: 'Intensité',
+   // Format kind
+    const titlekind = {
+        cardio: 'Cardio',
+        energy: 'Energie',
+        endurance: 'Endurance',
+        strength: 'Force',
+        speed: 'Vitesse',
+        intensity: 'Intensité',
     }
+    const formatKind = (id) => titlekind[kind[id]]
 
-    const formatKind = (id) => titleKind[data.find(item => item.kind[id])]
     return (
         <>
             <RadarChart cx="50%"
@@ -54,6 +27,7 @@ function Performance(){
             >
                 <PolarGrid />
                 <PolarAngleAxis dataKey="kind"
+                                tickFormatter={formatKind}
                                 tick={{ fill: 'white', fontSize: '0.875em'}}
                 />
                 <Radar legendType="none"

@@ -1,8 +1,7 @@
 import {PieChart, Cell, Legend, Pie} from "recharts";
 import '../styles/Score.css'
 
-function Score(){
-    const data = 0.5
+function Score({data}){
     return(
         <>
             <h2 className="chart-title-score">Score</h2>

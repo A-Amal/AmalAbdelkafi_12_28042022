@@ -1,7 +1,8 @@
 import {Line, LineChart,  Tooltip, XAxis, YAxis} from "recharts";
 import '../styles/AverageSessions.css'
 
-function AverageSessions(){
+function AverageSessions({data}){
+    {/*
     const data=[
         {
             day: 1,
@@ -31,7 +32,7 @@ function AverageSessions(){
             day: 7,
             sessionLength: 50
         }
-    ]
+    ]*/}
     const daysWeek = { 1: 'L', 2: 'M', 3: 'M', 4: 'J', 5: 'V', 6: 'S', 7: 'D' }
     const formatDay = (item) => daysWeek[item]
     return(

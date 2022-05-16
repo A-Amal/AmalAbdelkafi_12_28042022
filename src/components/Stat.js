@@ -5,13 +5,8 @@ import cheeseburger from "../assets/cheeseburger.svg"
 import '../styles/Stat.css'
 
 
-function Stat(){
-    const data = {
-        calorieCount: 1930,
-        proteinCount: 155,
-        carbohydrateCount: 290,
-        lipidCount: 50
-    }
+function Stat({data}){
+
     let stat = { icon: '', color: '', unit: '', title: ''}
     {/*
     switch () {

@@ -8,34 +8,36 @@ import Score from "../components/Score";
 import Stat from "../components/Stat";
 
 function Home(){
-    const userinfo = data.USER_MAIN_DATA.find(x => x.id = 12)
-    console.log(userinfo.userInfos.firstName)
+    let user = data.USER_MAIN_DATA.find(x => x.id === 12)
+    let activity = data.USER_ACTIVITY.find(x => x.userId === user.id)
+    let sessions = data.USER_AVERAGE_SESSIONS.find(x => x.userId === user.id)
+    let performance = data.USER_PERFORMANCE.find(x => x.userId === user.id)
 
     return(
             <section className="homepage">
                         <header className="section-header">
-                            <h1 className="section-title">Bonjour {userinfo.userInfos.firstName}</h1>
+                            <h1 className="section-title">Bonjour {user.userInfos.firstName}</h1>
                             <p className="section-secondary">Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
                         </header>
                         <div className="homepage-grid">
                             <div className="chart-activity-stats">
                                 <div className="chart-activity">
-                                    <Activity />
+                                    <Activity data={activity.sessions}/>
                                 </div>
                                 <div className="chart-sessions-performance-score">
                                     <div className="chart-average-sessions">
-                                       <AverageSessions />
+                                       <AverageSessions data={sessions.sessions}/>
                                     </div>
                                     <div className="chart-performance">
-                                        <Performance />
+                                        <Performance data={performance.data}  kind={performance.kind}/>
                                     </div>
                                     <div className="chart-score">
-                                        <Score />
+                                        <Score data={user.score||user.todayScore}/>
                                     </div>
                                 </div>
                             </div>
                             <div className="stats">
-                                <Stat/>
+                                <Stat data={user.keyData}/>
                             </div>
                         </div>
             </section>
