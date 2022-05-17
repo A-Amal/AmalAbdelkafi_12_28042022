@@ -12,7 +12,8 @@ function Home(){
     let activity = data.USER_ACTIVITY.find(x => x.userId === user.id)
     let sessions = data.USER_AVERAGE_SESSIONS.find(x => x.userId === user.id)
     let performance = data.USER_PERFORMANCE.find(x => x.userId === user.id)
-
+    console.log(process.env.REACT_APP_USE_API)
+    console.log(process.env.REACT_APP_API_URL)
     return(
             <section className="homepage">
                         <header className="section-header">
