@@ -1,4 +1,5 @@
 import {RadarChart, Legend, PolarAngleAxis, PolarGrid, Radar, PolarRadiusAxis} from "recharts";
+import * as propTypes from "prop-types";
 
 function Performance({data, kind}){
     // Rotate radar to start with intensity
@@ -43,3 +44,8 @@ function Performance({data, kind}){
     )
 }
 export default Performance;
+// Props types
+Performance.propTypes = {
+    data: propTypes.array.isRequired,
+    kind: propTypes.object.isRequired,
+}

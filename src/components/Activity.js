@@ -2,6 +2,7 @@
 import { Bar, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis} from "recharts";
 import '../styles/Activity.css'
 import {BarChart} from "recharts";
+import * as propTypes from "prop-types";
 
 function Activity({data}){
     const ActivityTooltipStyle ={
@@ -85,9 +86,19 @@ function Activity({data}){
 }
 export default Activity;
 
+
 const CustomTooltip = ({ active, payload }) => active ? (
     <div className="chart-tooltip-activity">
         <div>{payload[0].value}kg</div>
         <div>{payload[1].value}kCal</div>
     </div>
 ) : null
+
+// Props types
+Activity.propTypes = {
+    data: propTypes.array.isRequired,
+}
+CustomTooltip.propTypes = {
+    active: propTypes.bool,
+    payload: propTypes.array,
+}

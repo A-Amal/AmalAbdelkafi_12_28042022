@@ -1,5 +1,6 @@
 import {Line, LineChart,  Tooltip, XAxis, YAxis} from "recharts";
 import '../styles/AverageSessions.css'
+import * as propTypes from "prop-types";
 
 function AverageSessions({data}){
     const sessionStyleTooltip = {
@@ -50,3 +51,12 @@ const CustomTooltip = ({ active, payload }) => active ? (
         <div>{payload[0].value} min</div>
     </div>
 ) : null
+
+// Props types
+AverageSessions.propTypes = {
+    data: propTypes.array.isRequired,
+};
+CustomTooltip.propTypes = {
+    active: propTypes.bool,
+    payload: propTypes.array,
+};

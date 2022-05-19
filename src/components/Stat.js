@@ -3,6 +3,7 @@ import energy from "../assets/energy.svg"
 import chicken from "../assets/chicken.svg"
 import cheeseburger from "../assets/cheeseburger.svg"
 import '../styles/Stat.css'
+import * as propTypes from "prop-types";
 
 
 function Stat({data}){
@@ -87,3 +88,9 @@ function Stat({data}){
     )
 }
 export default Stat;
+
+// Props types
+Stat.propTypes = {
+    type: propTypes.string.isRequired,
+    value: propTypes.number.isRequired,
+}

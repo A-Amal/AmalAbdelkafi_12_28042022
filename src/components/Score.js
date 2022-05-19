@@ -1,5 +1,6 @@
 import {PieChart, Cell, Legend, Pie} from "recharts";
 import '../styles/Score.css'
+import * as propTypes from "prop-types";
 
 function Score({data}){
     return(
@@ -37,7 +38,8 @@ function Score({data}){
         </>
     )
 }
-export default Score;
+export default Score
+
 
 const CustomLegend = ({ payload }) => (
     <div className="chart-legend-score">
@@ -45,3 +47,11 @@ const CustomLegend = ({ payload }) => (
         <div className="chart-legend-score-2">de votre objectif</div>
     </div>
 )
+
+// Props types
+Score.propTypes = {
+    data: propTypes.number.isRequired,
+}
+CustomLegend.propTypes = {
+    payload: propTypes.array,
+}
