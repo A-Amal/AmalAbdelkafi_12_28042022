@@ -6,11 +6,12 @@ import '../styles/Stat.css'
 import * as propTypes from "prop-types";
 
 
-function Stat({data}){
+
+function Stat({type, value}){
 
     let stat = { icon: '', color: '', unit: '', title: ''}
-    {/*
-    switch () {
+
+    switch (type) {
         case 'calorieCount':
             stat = {
                 icon: energy,
@@ -44,46 +45,20 @@ function Stat({data}){
             }
             break
         default: break
-    }*/}
+    }
 
     return(
         <>
             <div className="stat">
-                <div className={`stat-icon icon-red`}>
-                    <img  src={energy} className="img" alt={'Calories'} />
+                <div className={`stat-icon icon-${stat.color}`}>
+                    <img src={stat.icon} className={"img"} alt={stat.title} />
                 </div>
                 <div className="stat-content">
-                    <h2 className="stat-title">{data.calorieCount}{"kCal"}</h2>
-                    <p className="stat-secondary">{'Calories'}</p>
+                    <h2 className="stat-title">{value}{stat.unit}</h2>
+                    <p className="stat-secondary">{stat.title}</p>
                 </div>
             </div>
-            <div className="stat">
-                <div className={`stat-icon icon-blue`}>
-                    <img src={chicken} className="img" alt={'Protéines'} />
-                </div>
-                <div className="stat-content">
-                    <h2 className="stat-title">{data.carbohydrateCount}{"g"}</h2>
-                    <p className="stat-secondary">{'Protéines'}</p>
-                </div>
-            </div>
-            <div className="stat">
-                <div className={`stat-icon icon-yellow`}>
-                    <img src={apple} className="img" alt={'Glucides'} />
-                </div>
-                <div className="stat-content">
-                    <h2 className="stat-title">{data.lipidCount}{"g"}</h2>
-                    <p className="stat-secondary">{'Glucides'}</p>
-                </div>
-            </div>
-            <div className="stat">
-                <div className={`stat-icon icon-pink`}>
-                    <img src={cheeseburger} className="img" alt={'Lipides'} />
-                </div>
-                <div className="stat-content">
-                    <h2 className="stat-title">{data.proteinCount}{"g"}</h2>
-                    <p className="stat-secondary">{'Lipides'}</p>
-                </div>
-            </div>
+
         </>
     )
 }

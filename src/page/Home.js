@@ -62,7 +62,9 @@ function Home(){
                                 </div>
                             </div>
                             <div className="stats">
-                                {userApi && <Stat data={userApi.keyData}/>}
+                                {userApi && Object.keys(userApi.keyData).map((key) => (
+                                    <Stat type={key} value={userApi.keyData[key]} key={key} />
+                                ))}
                             </div>
                         </div>
             </section>
