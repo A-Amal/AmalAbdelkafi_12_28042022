@@ -54,7 +54,7 @@ function Activity({data}){
                     hide
                 />
 
-                <Tooltip />
+                <Tooltip content={<CustomTooltip />}/>
                 <Bar
                     yAxisId="1"
                     dataKey="kilogram"
@@ -74,3 +74,10 @@ function Activity({data}){
     )
 }
 export default Activity;
+
+const CustomTooltip = ({ active, payload }) => active ? (
+    <div className="chart-tooltip">
+        <div>{payload[0].value}kg</div>
+        <div>{payload[1].value}kCal</div>
+    </div>
+) : null

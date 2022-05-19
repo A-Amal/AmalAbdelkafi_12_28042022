@@ -40,3 +40,13 @@ li:first-child:before {
 li:last-child:before {
     background-color:#E60000;
 }
+.chart-tooltip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px 6px;
+    background-color:#E60000;
+    color: white;
+    font-size: 7px;
+}
