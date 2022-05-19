@@ -4,6 +4,16 @@ import '../styles/Activity.css'
 import {BarChart} from "recharts";
 
 function Activity({data}){
+    const ActivityTooltipStyle ={
+        display:' flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        gap: '16px',
+        padding:' 16px 6px',
+        backgroundColor:'#E60000',
+        color: 'white',
+        fontSize: '7px',
+    }
     const formatDay = (item) => (new Date(item)).getDate()
     const formatLegend = (value) => value === 'kilogram' ? 'Poids (kg)' : 'Calories brûlées (kCal)'
     return(
@@ -54,7 +64,7 @@ function Activity({data}){
                     hide
                 />
 
-                <Tooltip content={<CustomTooltip />}/>
+                <Tooltip itemStyle={ActivityTooltipStyle} content={<CustomTooltip />}/>
                 <Bar
                     yAxisId="1"
                     dataKey="kilogram"
@@ -76,7 +86,7 @@ function Activity({data}){
 export default Activity;
 
 const CustomTooltip = ({ active, payload }) => active ? (
-    <div className="chart-tooltip">
+    <div className="chart-tooltip-activity">
         <div>{payload[0].value}kg</div>
         <div>{payload[1].value}kCal</div>
     </div>

@@ -2,37 +2,13 @@ import {Line, LineChart,  Tooltip, XAxis, YAxis} from "recharts";
 import '../styles/AverageSessions.css'
 
 function AverageSessions({data}){
-    {/*
-    const data=[
-        {
-            day: 1,
-            sessionLength: 30
-        },
-        {
-            day: 2,
-            sessionLength: 40
-        },
-        {
-            day: 3,
-            sessionLength: 50
-        },
-        {
-            day: 4,
-            sessionLength: 30
-        },
-        {
-            day: 5,
-            sessionLength: 30
-        },
-        {
-            day: 6,
-            sessionLength: 50
-        },
-        {
-            day: 7,
-            sessionLength: 50
-        }
-    ]*/}
+    const sessionStyleTooltip = {
+        width:"39px",
+        hide:"25px",
+        color: 'black',
+        backgroundColor:'white',
+        fontSize: '7px'
+    };
     const daysWeek = { 1: 'L', 2: 'M', 3: 'M', 4: 'J', 5: 'V', 6: 'S', 7: 'D' }
     const formatDay = (item) => daysWeek[item]
     return(
@@ -53,7 +29,7 @@ function AverageSessions({data}){
                     hide
                     domain={['dataMin-10', 'dataMax+1']}
                 />
-                <Tooltip  />
+                <Tooltip contentStyle={sessionStyleTooltip} content={<CustomTooltip />} />
                 <Line
                     type="monotone"
                     dataKey="sessionLength"
@@ -68,3 +44,9 @@ function AverageSessions({data}){
     )
 }
 export default AverageSessions;
+
+const CustomTooltip = ({ active, payload }) => active ? (
+    <div className="chart-tooltip-session">
+        <div>{payload[0].value} min</div>
+    </div>
+) : null

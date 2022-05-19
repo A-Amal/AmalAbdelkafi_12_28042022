@@ -30,6 +30,7 @@ function Score({data}){
                     <Legend
                         verticalAlign="middle"
                         align="center"
+                        content={CustomLegend}
                     />
                 </PieChart>
 
@@ -37,3 +38,10 @@ function Score({data}){
     )
 }
 export default Score;
+
+const CustomLegend = ({ payload }) => (
+    <div className="chart-legend-score">
+        <div className="chart-legend-score-1">{payload[0].payload.value * 100}%</div>
+        <div className="chart-legend-score-2">de votre objectif</div>
+    </div>
+)
