@@ -9,6 +9,7 @@ import Stat from "../components/Stat";
 import {useEffect, useState} from "react";
 import {getUser, getUserActivity, getUserAverageSessions, getUserPerformance} from "../Service";
 import {Link, useParams} from "react-router-dom";
+import {ClipLoader, HashLoader, MoonLoader} from "react-spinners";
 
 
 function Home(){
@@ -38,30 +39,30 @@ function Home(){
             {params.id === '12' || params.id === '18' ? (
             <section className="homepage">
                         <header className="section-header">
-                            <h1 className="section-title">Bonjour {userApi && userApi.userInfos.firstName}</h1>
+                            <h1 className="section-title">Bonjour {userApi? userApi.userInfos.firstName: <MoonLoader color={" #FF0000"} size={'50'}/>}</h1>
                             <p className="section-secondary">Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
                         </header>
                         <div className="homepage-grid">
                             <div className="chart-activity-stats">
                                 <div className="chart-activity">
-                                    {activityApi && <Activity data={activityApi.sessions}/>}
+                                    {activityApi ? <Activity data={activityApi.sessions}/> : <MoonLoader color={" #FF0000"} size={'50'}/>}
                                 </div>
                                 <div className="chart-sessions-performance-score">
                                     <div className="chart-average-sessions">
-                                        {sessionsApi && <AverageSessions data={sessionsApi.sessions}/>}
+                                        {sessionsApi ?<AverageSessions data={sessionsApi.sessions}/> : <MoonLoader color={" #FF0000"} size={'50'}/>}
                                     </div>
                                     <div className="chart-performance">
-                                        {performanceApi && <Performance data={performanceApi.data}  kind={performanceApi.kind}/>}
+                                        {performanceApi ? <Performance data={performanceApi.data}  kind={performanceApi.kind}/> : <MoonLoader color={" #FF0000"} size={'50'} />}
                                     </div>
                                     <div className="chart-score">
-                                        {userApi && <Score data={userApi.score||userApi.todayScore}/>}
+                                        {userApi ? <Score data={userApi.score||userApi.todayScore}/> : <MoonLoader color={" #FF0000"} size={'50'}/>}
                                     </div>
                                 </div>
                             </div>
                             <div className="stats">
-                                {userApi && Object.keys(userApi.keyData).map((key) => (
+                                {userApi ?( Object.keys(userApi.keyData).map((key) => (
                                     <Stat type={key} value={userApi.keyData[key]} key={key} />
-                                ))}
+                                ))) : <MoonLoader color={" #FF0000"} size={'50'}/> }
                             </div>
                         </div>
             </section>): (
