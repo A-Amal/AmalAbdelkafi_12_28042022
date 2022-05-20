@@ -67,3 +67,41 @@
     flex-direction: row;
     justify-content: space-between;
 }
+.page-error404{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 150px;
+    margin-bottom: 90px;
+}
+.page-error404-title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 200px;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    margin-block-start: 0;
+    margin-block-end:0;
+    color: #FF0000;
+}
+.page-error404-secondary{
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    color: #FF0000;
+    margin-block-start: 0;
+    margin-block-end:0;
+}
+.page-error404-link {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    margin-bottom: 159px;
+    margin-top: 182px;
+    color: #FF0000;
+    text-decoration: underline;
+}

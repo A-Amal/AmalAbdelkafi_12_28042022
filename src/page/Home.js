@@ -8,7 +8,7 @@ import Score from "../components/Score";
 import Stat from "../components/Stat";
 import {useEffect, useState} from "react";
 import {getUser, getUserActivity, getUserAverageSessions, getUserPerformance} from "../Service";
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 
 
 function Home(){
@@ -33,12 +33,9 @@ function Home(){
         }
 
     }, [])
-    console.log(userApi)
-    console.log(activityApi)
-    console.log(sessionsApi)
-    console.log(performanceApi)
 
-    return(
+    return(<>
+            {params.id === '12' || params.id === '18' ? (
             <section className="homepage">
                         <header className="section-header">
                             <h1 className="section-title">Bonjour {userApi && userApi.userInfos.firstName}</h1>
@@ -67,8 +64,16 @@ function Home(){
                                 ))}
                             </div>
                         </div>
-            </section>
-
+            </section>): (
+                <section className="homepage">
+                    <div className="page-error404">
+                        <h1 className="page-error404-title">404</h1>
+                        <p className="page-error404-secondary">Oups! La page que vous demandez n'existe pas.</p>
+                        <Link to="/" className="page-error404-link">Retourner sur la page d’accueil</Link>
+                    </div>
+                </section>)
+            }
+        </>
     )
 }
 export default Home;
