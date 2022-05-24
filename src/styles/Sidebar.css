@@ -12,7 +12,7 @@
     position: absolute;
     width: 64px;
     height: 316px;
-    left: -20px;
+    left: -10px;
     top: 300px;
     display: flex;
     flex-direction: column;
@@ -42,4 +42,10 @@
     color: white;
     transform: rotate(-90deg);
     margin-top: 620px;
+}
+
+@media screen and (min-width: 945px) and (max-width: 1345px ) {
+    .sidebar-menu{
+        left: -20px
+    }
 }
