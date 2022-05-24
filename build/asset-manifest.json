@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4863c365.css",
+    "main.js": "/static/js/main.97804f59.js",
+    "static/js/787.a8762e9d.chunk.js": "/static/js/787.a8762e9d.chunk.js",
+    "static/media/logo.svg": "/static/media/logo.201671a5b564c86b8e974f3285bc0fc5.svg",
+    "static/media/swim.svg": "/static/media/swim.1380e0e30424530100ebed0965332f9f.svg",
+    "static/media/bike.svg": "/static/media/bike.3647b464d162bf419f41f54190b9ea64.svg",
+    "static/media/apple.svg": "/static/media/apple.eee9f2896bfafa1bbfaede892698f73f.svg",
+    "static/media/chicken.svg": "/static/media/chicken.ee8509cc58502c15cf7c52123efc6b99.svg",
+    "static/media/cheeseburger.svg": "/static/media/cheeseburger.40bd81c22b5e3ba576ad639ba124690b.svg",
+    "static/media/meditation.svg": "/static/media/meditation.d6286be3781ee74082e4111403c81fe2.svg",
+    "index.html": "/index.html",
+    "static/media/energy.svg": "/static/media/energy.97a81ac7ff3ecf8111ee63bd874fed9b.svg",
+    "static/media/dumbbell.svg": "/static/media/dumbbell.30b0db0632a8f4f2e735c95d73198dd7.svg",
+    "main.4863c365.css.map": "/static/css/main.4863c365.css.map",
+    "main.97804f59.js.map": "/static/js/main.97804f59.js.map",
+    "787.a8762e9d.chunk.js.map": "/static/js/787.a8762e9d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4863c365.css",
+    "static/js/main.97804f59.js"
+  ]
+}
