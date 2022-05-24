@@ -1,4 +1,4 @@
-.chart-title-score{
+.chart-title-score {
     font-family: 'Roboto', 'sans-serif';
     font-style: normal;
     font-weight: 500;
@@ -9,7 +9,8 @@
     opacity: 0.5;
     padding: 20px 20px;
 }
-.chart-legend-score{
+
+.chart-legend-score {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,11 +18,13 @@
     width: 95px;
     margin: auto;
 }
-.chart-legend-score-1{
+
+.chart-legend-score-1 {
     color: #282D30;
     font-size: 32px;
 }
-.chart-legend-score-2{
+
+.chart-legend-score-2 {
     text-align: center;
     font-size: 16px;
     color: #282D30;

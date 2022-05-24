@@ -1,4 +1,4 @@
-.chart-title-session{
+.chart-title-session {
     font-family: 'Roboto', 'sans-serif';
     font-style: normal;
     font-weight: 500;
@@ -10,15 +10,16 @@
     padding: 20px 20px;
 
 }
-.chart-tooltip-session{
-    width:39px;
-    height:25px;
+
+.chart-tooltip-session {
+    width: 39px;
+    height: 25px;
     color: black;
-    background-color:white;
-    font-family: 'Roboto','sans-serif';
+    background-color: white;
+    font-family: 'Roboto', 'sans-serif';
     font-style: normal;
     font-weight: 500;
     font-size: 8px;
     line-height: 24px;
-    text-align: center;
+    text-align: centera;
 }

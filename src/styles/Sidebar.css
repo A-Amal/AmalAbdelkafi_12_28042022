@@ -1,5 +1,5 @@
-.sidebar{
-    width: 117px;
+.sidebar {
+    width: 10%;
     background-color: #020203;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     display: flex;
@@ -7,28 +7,32 @@
     justify-content: center;
     align-content: flex-end;
 }
-.sidebar-menu{
+
+.sidebar-menu {
     position: absolute;
     width: 64px;
     height: 316px;
-    left: -10px;
+    left: -20px;
     top: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
 }
-.sidebar-menu img{
+
+.sidebar-menu img {
     margin-top: 16px;
     margin-left: 16px;
 }
-.sidebar-menu-link{
+
+.sidebar-menu-link {
     width: 64px;
     height: 64px;
     background-color: white;
     border-radius: 6px;
 }
-.sidebar-copyright{
+
+.sidebar-copyright {
     width: 138px;
     font-family: 'Roboto', 'sans-serif';
     font-style: normal;

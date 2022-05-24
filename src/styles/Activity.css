@@ -1,9 +1,11 @@
-.header-activity{
+.header-activity {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
-.chart-title{
+
+.chart-title {
     font-family: 'Roboto', 'sans-serif';
     font-style: normal;
     font-weight: 500;
@@ -11,7 +13,8 @@
     line-height: 24px;
     color: #20253A;
 }
-.chart-legend{
+
+.chart-legend {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -20,12 +23,14 @@
     color: #74798C;
     display: flex;
 }
+
 .chart-legend li {
     display: flex;
     align-items: center;
     gap: 0.625em;
     margin-left: 10px;
 }
+
 .chart-legend li:before {
     display: block;
     content: '';
@@ -36,10 +41,10 @@
 
 li:first-child:before {
     background-color: #282D30;
- }
+}
 
 li:last-child:before {
-    background-color:#E60000;
+    background-color: #E60000;
 }
 
 .chart-tooltip-activity {
@@ -48,8 +53,7 @@ li:last-child:before {
     justify-content: center;
     gap: 16px;
     padding: 16px 6px;
-    background-color:#E60000;
+    background-color: #E60000;
     color: white;
     font-size: 7px;
 }
-

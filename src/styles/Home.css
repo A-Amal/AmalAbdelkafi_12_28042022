@@ -1,13 +1,14 @@
-.homepage{
+.homepage {
+    width: 90%;
     display: flex;
     flex-direction: column;
-    padding: 50px;
-
 }
-.section-header{
 
+.section-header {
+    margin: 50px 0 0 50px;
 }
-.section-title{
+
+.section-title {
     font-family: 'Roboto', 'sans-serif';
     font-style: normal;
     font-weight: 500;
@@ -16,7 +17,8 @@
     color: black;
     text-align: left;
 }
-.section-secondary{
+
+.section-secondary {
     font-family: 'Roboto', 'sans-serif';
     font-style: normal;
     font-weight: 400;
@@ -25,49 +27,67 @@
     color: black;
     text-align: left;
 }
-.homepage-grid{
+
+.homepage-grid {
     display: flex;
     flex-direction: row;
     justify-content: start;
+    margin-bottom: 50px;
 }
-.chart-average-sessions{
+
+.chart-average-sessions {
     width: 258px;
     height: 263px;
     background: #FF0000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.0212249);
     border-radius: 5px;
 }
-.chart-activity{
+
+.chart-activity {
     margin-bottom: 30px;
     background: #FBFBFB;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.0212249);
     border-radius: 5px;
     padding: 30px;
+    margin-left: 50px;
 }
-.chart-performance{
+
+.chart-performance {
     width: 258px;
     height: 263px;
     background: #282D30;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.0212249);
     border-radius: 5px;
 }
-.chart-score{
+
+.chart-score {
     width: 258px;
     height: 263px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.0212249);
     border-radius: 5px;
 }
-.chart-activity-stats{
+
+.chart-activity-stats {
     display: flex;
     flex-direction: column;
-
+    width: 75%;
 }
-.chart-sessions-performance-score{
+
+.chart-sessions-performance-score {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-left: 50px;
 }
-.page-error404{
+
+.stats {
+    width: 30%;
+    margin-left: 30px;
+
+}
+
+.page-error404 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,17 +95,19 @@
     margin-left: 150px;
     margin-bottom: 90px;
 }
-.page-error404-title{
+
+.page-error404-title {
     font-family: 'Roboto', sans-serif;
     font-size: 200px;
     font-weight: bold;
     font-style: normal;
     text-align: center;
     margin-block-start: 0;
-    margin-block-end:0;
+    margin-block-end: 0;
     color: #FF0000;
 }
-.page-error404-secondary{
+
+.page-error404-secondary {
     font-family: 'Roboto', sans-serif;
     font-size: 36px;
     font-weight: normal;
@@ -93,8 +115,9 @@
     text-align: center;
     color: #FF0000;
     margin-block-start: 0;
-    margin-block-end:0;
+    margin-block-end: 0;
 }
+
 .page-error404-link {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
@@ -104,4 +127,37 @@
     margin-top: 182px;
     color: #FF0000;
     text-decoration: underline;
+}
+
+@media screen and (min-width: 945px) and (max-width: 1345px ) {
+    .section-header {
+        margin: 20px 0 0 20px;
+    }
+
+    .homepage-grid {
+        flex-direction: column-reverse;
+    }
+
+    .chart-activity {
+        margin-left: 20px;
+    }
+
+    .chart-activity-stats {
+        width: 100%;
+    }
+
+    .stats {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .chart-sessions-performance-score {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-left: 0px;
+    }
 }

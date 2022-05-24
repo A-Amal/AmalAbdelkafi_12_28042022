@@ -1,10 +1,17 @@
-import {RadarChart, Legend, PolarAngleAxis, PolarGrid, Radar, PolarRadiusAxis} from "recharts";
+import {RadarChart, Legend, PolarAngleAxis, PolarGrid, Radar} from "recharts";
 import * as propTypes from "prop-types";
 
-function Performance({data, kind}){
+/**
+ * Show average sessions chart
+ * @param {Object} params
+ * @param {Array} params.data
+ * @param {Object} params.kind
+ * @return {JSX.Element}
+ */
+function Performance({data, kind}) {
     // Rotate radar to start with intensity
     const angleStart = 210
-   // Format kind
+    // Format kind
     const titlekind = {
         cardio: 'Cardio',
         energy: 'Energie',
@@ -26,10 +33,10 @@ function Performance({data, kind}){
                         height={260}
                         data={data}
             >
-                <PolarGrid />
+                <PolarGrid/>
                 <PolarAngleAxis dataKey="kind"
                                 tickFormatter={formatKind}
-                                tick={{ fill: 'white', fontSize: '0.875em'}}
+                                tick={{fill: 'white', fontSize: '0.875em'}}
                 />
                 <Radar legendType="none"
                        dataKey="value"
@@ -37,12 +44,13 @@ function Performance({data, kind}){
                        fill="#E60000"
                        fillOpacity={0.7}
                 />
-                <Legend />
+                <Legend/>
             </RadarChart>
 
         </>
     )
 }
+
 export default Performance;
 // Props types
 Performance.propTypes = {

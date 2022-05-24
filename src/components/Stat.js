@@ -6,10 +6,16 @@ import '../styles/Stat.css'
 import * as propTypes from "prop-types";
 
 
+/**
+ * Show stat
+ * @param {Object} params
+ * @param {'calorieCount'|'carbohydrateCount'|'lipidCount'|'proteinCount'} params.type
+ * @param {Number} params.value
+ * @return {JSX}
+ */
+function Stat({type, value}) {
 
-function Stat({type, value}){
-
-    let stat = { icon: '', color: '', unit: '', title: ''}
+    let stat = {icon: '', color: '', unit: '', title: ''}
 
     switch (type) {
         case 'calorieCount':
@@ -44,14 +50,15 @@ function Stat({type, value}){
                 title: 'Lipides'
             }
             break
-        default: break
+        default:
+            break
     }
 
-    return(
+    return (
         <>
             <div className="stat">
                 <div className={`stat-icon icon-${stat.color}`}>
-                    <img src={stat.icon} className={"img"} alt={stat.title} />
+                    <img src={stat.icon} className={"img"} alt={stat.title}/>
                 </div>
                 <div className="stat-content">
                     <h2 className="stat-title">{value}{stat.unit}</h2>
@@ -62,6 +69,7 @@ function Stat({type, value}){
         </>
     )
 }
+
 export default Stat;
 
 // Props types

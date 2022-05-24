@@ -1,9 +1,13 @@
 import {Link} from "react-router-dom";
 
+/**
+ * Show Error
+ * @returns {JSX}
+ */
 
 
-function Error(){
-    return(
+function Error() {
+    return (
         <div className="page-error404">
             <h1 className="page-error404-title">404</h1>
             <p className="page-error404-secondary">Oups! La page que vous demandez n'existe pas.</p>
@@ -11,4 +15,5 @@ function Error(){
         </div>
     )
 }
+
 export default Error;
