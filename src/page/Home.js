@@ -38,35 +38,35 @@ function Home() {
                 <section className="homepage">
                     <header className="section-header">
                         <h1 className="section-title">Bonjour {userApi ? userApi.userInfos.firstName :
-                            <MoonLoader color={" #FF0000"} size={'50'}/>}</h1>
+                            <MoonLoader color={" #FF0000"} />}</h1>
                         <p className="section-secondary">Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
                     </header>
                     <div className="homepage-grid">
                         <div className="chart-activity-stats">
                             <div className="chart-activity">
                                 {activityApi ? <Activity data={activityApi.sessions}/> :
-                                    <MoonLoader color={" #FF0000"} size={'50'}/>}
+                                    <MoonLoader color={" #FF0000"}/>}
                             </div>
                             <div className="chart-sessions-performance-score">
                                 <div className="chart-average-sessions">
                                     {sessionsApi ? <AverageSessions data={sessionsApi.sessions}/> :
-                                        <MoonLoader color={" #FF0000"} size={'50'}/>}
+                                        <MoonLoader color={" #FF0000"} />}
                                 </div>
                                 <div className="chart-performance">
                                     {performanceApi ?
                                         <Performance data={performanceApi.data} kind={performanceApi.kind}/> :
-                                        <MoonLoader color={" #FF0000"} size={'50'}/>}
+                                        <MoonLoader color={" #FF0000"}/>}
                                 </div>
                                 <div className="chart-score">
                                     {userApi ? <Score data={userApi.score || userApi.todayScore}/> :
-                                        <MoonLoader color={" #FF0000"} size={'50'}/>}
+                                        <MoonLoader color={" #FF0000"} />}
                                 </div>
                             </div>
                         </div>
                         <div className="stats">
                             {userApi ? (Object.keys(userApi.keyData).map((key) => (
                                 <Stat type={key} value={userApi.keyData[key]} key={key}/>
-                            ))) : <MoonLoader color={" #FF0000"} size={'50'}/>}
+                            ))) : <MoonLoader color={" #FF0000"} />}
                         </div>
                     </div>
                 </section>) : (
