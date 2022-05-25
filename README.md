@@ -61,6 +61,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 Configuration is available in `src/.env`
 
 - To use mocked data set `REACT_APP_USE_API` at `false` or at `true` to use data from api
+- to change user you need to change id param in the url
 
 ## 4. Deliverables
 [React app Code](https://github.com/A-Amal/AmalAbdelkafi_12_28042022)  
