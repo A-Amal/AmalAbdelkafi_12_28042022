@@ -65,4 +65,4 @@ Configuration is available in `src/.env`
 
 ## 4. Deliverables
 [React app Code](https://github.com/A-Amal/AmalAbdelkafi_12_28042022)  
-[Github-Page Demo](https://a-amal.github.io/AmalAbdelkafi_12_28042022/)
+
