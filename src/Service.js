@@ -1,7 +1,7 @@
 /**
  * Get user data
  * @param {Number} id
- * @return {json.Element}
+ * @return {Promise.Element}
  */
 export const getUser = (id) => {
     return fetch(`http://localhost:3000/user/${id}`)
@@ -12,7 +12,7 @@ export const getUser = (id) => {
 /**
  * Get user activity data
  * @param {Number} id
- * @return {json.Element}
+ * @return {Promise.Element}
  */
 export const getUserActivity = (id) => {
     return fetch(`http://localhost:3000/user/${id}/activity`)
@@ -22,7 +22,7 @@ export const getUserActivity = (id) => {
 /**
  * Get user average sessions data
  * @param {Number} id
- * @return {json.Element}
+ * @return {Promise.Element}
  */
 
 export const getUserAverageSessions = (id) => {
@@ -35,7 +35,7 @@ export const getUserAverageSessions = (id) => {
 /**
  * Get user performance data
  * @param {Number} id
- * @return {json.Element}
+ * @return {Promise.Element}
  */
 
 export const getUserPerformance = (id) => {
