@@ -18,20 +18,23 @@ function Home() {
     const [sessionsApi, setSessionsApi] = useState()
     const [performanceApi, setPerformanceApi] = useState()
 
+
     useEffect(() => {
-        if (!process.env.REACT_APP_USE_API) {
-            setUserApi(data.USER_MAIN_DATA.find(x => x.id === params.id))
-            setActivityApi(data.USER_ACTIVITY.find(x => x.userId === userApi.id))
-            setSessionsApi(data.USER_AVERAGE_SESSIONS.find(x => x.userId === userApi.id))
-            setPerformanceApi(data.USER_PERFORMANCE.find(x => x.userId === userApi.id))
-        } else {
+        if (process.env.REACT_APP_USE_API === 'true') {
+            console.log("v1 mock")
+            setUserApi(data.USER_MAIN_DATA.find(x => x.id == params.id))
+            setActivityApi(data.USER_ACTIVITY.find(x => x.userId == params.id))
+            setSessionsApi(data.USER_AVERAGE_SESSIONS.find(x => x.userId == params.id))
+            setPerformanceApi(data.USER_PERFORMANCE.find(x => x.userId == params.id))
+        }
+        if (process.env.REACT_APP_USE_API === "false") {
+            console.log("v2 Api")
             getUser(params.id).then(setUserApi)
             getUserActivity(params.id).then(setActivityApi)
             getUserAverageSessions(params.id).then(setSessionsApi)
             getUserPerformance(params.id).then(setPerformanceApi)
         }
-
-    }, [])
+    }, [params.id])
 
     return (<>
             {params.id === '12' || params.id === '18' ? (
